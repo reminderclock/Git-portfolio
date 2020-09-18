@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>블럭게임</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/tetris.css">
+    <script type="text/javascript" src="js/tetris.js"></script>
+  </head>
+  <body>
+  
+    <div id="wrapper-container" >
+	<div id="tetris-container">
+    <div class="wrap_user_board"> 
+	<div class="left">
+		<canvas id="stage" width="150px" height="300px">
+		</canvas>
+	<div style="float:left; margin-right:10px;">
+		<input type="image" id="tetris-rotate-button" name=button class="i1" src = "image/rotate.svg">
+	</div>
+	<div id="event">
+		<p><span id="message"></span></p>
+	</div>
+	</div>
+	<div class="right">
+    <div class="tetris-panel-container">
+		<p style="text-align:center">Next</p>
+        <canvas id="next" width="100px" height="150px"></canvas>
+		<p id="line">LINES:<span id="lines">0</span></p>
+	</div>
+	<div id="keyboard">
+		← : left <br/>
+		→ : right<br/>
+		↑ : rotate<br/>
+		↓ : down <br/>
+	 space: drop<br/>
+	</div>
+	<input type="button" id="startbutton" onclick="startbutton_click();" value="start!"/>
+    </div>
+			   
+    <div class="bottom">
+        <input type="image" id="tetris-move-left-button" name=button class="i1" src = "image/left.PNG">
+		<input type="image" id="tetris-fall-button" name=button src = "image/drop.PNG">
+        <input type="image" id="tetris-move-right-button" name=button src = "image/right.PNG">
+	    <input type="image" id="tetris-down-button" name=button src = "image/single.PNG">
+	</div>
+	</div>
+    </div>
+    </div>
+    <script>
+	var doubleSubmitFlag = false;
+    function doubleSubmitCheck(){
+        if(doubleSubmitFlag){
+            return doubleSubmitFlag;
+        }else{
+            doubleSubmitFlag = true;
+            return false;
+        }
+    }
+
+	function startbutton_click() {
+	if(doubleSubmitCheck()) return;
+	var tetris = new Tetris();
+      tetris.startGame();          
+    }
+    </script>
+	
+  </body>
+</html>

@@ -1,0 +1,149 @@
+html {
+    touch-action: manipulation;
+}
+    /* 전체 영역*/
+	*{margin: 0; padding: 0; -webkit-text-size-adjust:none; 
+	
+	}
+	/* 바디 부분  */
+	body {
+    font-size:12px;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	}
+	
+	/* 테트리스 적용 부분 */
+	canvas {
+	display:block;
+	border:1px solid #7d12ff; 
+	background:#000000;
+	
+	}
+#wrapper-container {
+	position:relative; width:100%;
+	}
+
+
+#tetris-container {
+    
+	position:relative;
+}
+
+#tetris-container .wrap_user_board {
+	border:1px solid black; 
+	overflow:hidden; 
+	width:282px; 
+	
+	padding:7px; 
+	margin:0 auto;
+	background:#000000;
+	}
+	
+#tetris-container .wrap_user_board .left, #tetris-container .wrap_user_board .right {
+	float:left;
+	padding-left:20px;
+	} 
+	
+
+#tetris-container .wrap_user_board .right {
+		width:80px;
+		
+		}
+    
+#tetris-container .wrap_user_board .bottom {
+		width:100px;
+		margin-top:20px; 
+		float:left;
+		}
+		
+
+#startbutton{
+  background:#ccff00;
+  border: none;
+  color: black;
+  padding: 4px 8px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  margin-left:15px; 
+  margin-top:10px;
+  
+}
+#line{
+	color:#ccff00;
+    text-align:center; 
+	margin-top:10px;
+  
+}
+
+#startbutton:hover {
+  background-color: black;
+  color: #ccff00;
+}
+
+#stage{
+	 background-color:black; 
+	 margin-top:5px;
+}
+#tetris-rotate-button{
+	width:50px;height:50px; padding-bottom:20px; margin-top:25px; margin-left:20px;
+}
+
+#event{
+	width:70px; height:50px; color:white; float:left; margin-top:34px;
+}
+#next{
+ background-color:black;
+}
+
+#keyboard{
+	 color:white; 
+	 margin-top:2px; 
+	 text-align:center; 
+}
+
+#tetris-move-left-button{
+	width:30px;height:30px; margin-left:0px;
+}
+#tetris-fall-button{
+	width:30px;height:30px; margin-left:0px;
+}
+#tetris-down-button{
+	width:30px;height:30px; margin-left:34px;
+}
+#tetris-move-right-button{
+	width:30px;height:30px; margin-left:0px;
+}
+
+.tetris-panel-container {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    background-color:black;
+}
+
+.tetris-panel-container-padding {
+	display:inline-block; 
+	margin-bottom:5px; 
+	background:#000000; 
+	border-style:none;
+	margin-left:10px;
+	
+	}
+
+.tetris-button-panel {
+    border-style: none;
+    width: 100%;
+}
+
+.tetris-button {
+   
+    padding-bottom: 30px;
+    text-align: center;
+	padding-right:4px;
+    
+}
+
